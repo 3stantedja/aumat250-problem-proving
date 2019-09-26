@@ -1,0 +1,44 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{problems}[2019/09/25 Problem Writing]
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[margin=1in]{geometry}
+
+% \RequirePackage{tikz}
+\RequirePackage{graphicx}
+\RequirePackage{wrapfig}
+\RequirePackage{booktabs}
+
+\RequirePackage{microtype}
+\RequirePackage{lmodern}
+
+\RequirePackage{mathtools}
+
+\RequirePackage{amsmath}
+\RequirePackage{amsthm}
+\RequirePackage{amssymb}
+\RequirePackage{textcomp}
+\RequirePackage{siunitx}
+
+\RequirePackage[parfill]{parskip}
+\RequirePackage{array}
+% \RequirePackage{multirow}
+
+\newcommand{\tlambda}{\(\lambda\) }
+\newcommand{\ttheta}{\(\theta\) }
+
+\theoremstyle{definition}
+\newtheorem*{prob}{Problem}
+
+\renewcommand{\proofname}{Answer}
+
+\sisetup{
+  separate-uncertainty,
+  multi-part-units = brackets,
+  bracket-numbers,
+  sticky-per
+}
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+\numberwithin{table}{section}
+
+\endinput
