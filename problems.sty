@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{problems}[2019/09/25 Problem Writing]
+\ProvidesPackage{problems}[2019/09/29 Problem Writing]
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[margin=1in]{geometry}
 
@@ -7,8 +7,9 @@
 \RequirePackage{graphicx}
 \RequirePackage{wrapfig}
 \RequirePackage{booktabs}
-\RequirePackage{titling}
+\RequirePackage{titling} % Expose titling data for general use
 \RequirePackage{fancyhdr}
+\RequirePackage{enumitem}
 
 \RequirePackage{microtype}
 \RequirePackage{lmodern}
@@ -44,6 +45,9 @@
 \numberwithin{equation}{section}
 \numberwithin{figure}{section}
 \numberwithin{table}{section}
+
+% Set ordered lists to be (a), (b), etc...
+\renewcommand{\labelenumi}{(\alph{enumi})}
 
 \author{Laurence Amadeus Tristan}
 \pagestyle{fancy}
