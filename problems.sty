@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{problems}[2019/09/29 Problem Writing]
+\ProvidesPackage{problems}[2019/10/01 Problem Writing]
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[margin=1in]{geometry}
 
@@ -30,11 +30,12 @@
 \newcommand{\ttheta}{\(\theta\) }
 
 \theoremstyle{definition}
-\newtheorem*{prob}{Problem}
+\newtheorem*{problem}{Problem}
 
-% Change the proof header to Answer for the time being
-% https://tex.stackexchange.com/questions/62020/how-to-change-the-word-proof-in-the-proof-environment
-\renewcommand{\proofname}{Answer}
+% Define an 'answer' environment based on the
+% 'proof' environment
+% https://tex.stackexchange.com/questions/123689/duplicating-the-amsthm-proof-environment
+\newenvironment{answer}{\begin{proof}[Answer]}{\end{proof}}
 
 \sisetup{
   separate-uncertainty,
@@ -48,13 +49,15 @@
 
 % Set ordered lists to be (a), (b), etc...
 \renewcommand{\labelenumi}{(\alph{enumi})}
-
-\author{Laurence Amadeus Tristan}
 \pagestyle{fancy}
-
 \fancyhead[L]{\thetitle}
 \fancyhead[C]{\thedate}
 \fancyhead[R]{\theauthor}
 
+\microtypesetup{
+  tracking = true,
+  kerning = true
+}
 
+\author{Laurence Amadeus Tristan}
 \endinput
