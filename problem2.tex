@@ -4,7 +4,7 @@
 \date{2019-09-29}
 
 \begin{document}
-    \begin{prob}
+    \begin{problem}
         In this problem, we will justify the equvalence \[p \leftrightarrow q \Leftrightarrow (p \to q) \wedge (q \to p).\]
         So consider the statements \(A = p \leftrightarrow q\) and \(B = (p \to q) \wedge (q \to p)\).
 
@@ -13,9 +13,15 @@
                 \item Argue if \(B\) is false, then so is \(A\). Do \textit{not} use the proposed equivalence above as part of your argument.
                 \item Explain why the two arguments in (a) and (b), taken together, justify the equivalence \(A \Leftrightarrow B\). Do this \textit{without} making any further arguments about the truth values of \(p\) and \(q\).
         \end{enumerate}
-    \end{prob}
+    \end{problem}
 
-    \begin{proof}
-        Here, we're asked to prove the equivalence of two statements 
-    \end{proof}
+    \begin{answer}
+        Here, we're asked to prove the equivalence of two statements, which are now represented as \(A\) and \(B\). We'll prove this by considering the forward case (\(A \Rightarrow B\)) then the backward case (\( A \Leftarrow B \)) in order to justify the equivalence.
+
+        Assume that \(A\) is false. We want to argue that \(B\) is also false. In order for statement \(A\) to be false, either \(p\) or \(q\) need to be false. Now, in order for \(B\) to be false, either \(p \to q\) or \(q \to p\) has to be false (both can't be false because it is not possible --- however it'll not be discussed here). As either \(p\) or \(p\) is false, one of the substatements in \(B\) will be false, and will result in statement \(B\) being false.
+
+        In the case that \(B\) is false, we can also apply the same line of thinking to argue that \(A\) is also false. Let's assume that \(B\) is false. This means that one of the substatements need to be false (as previously discussed), so either \(p\) or \(q\) has to be false. As a result, statement \(A\) will automatically be false because either \(p\) or \(q\) is false, making the biconditional false as well.
+
+        The reason why the arguments above justifies the equivalence \(A \Leftrightarrow B\) is because these arguments shows that both \(A\) and \(B\) has the same resulting truth tables without doubt.
+    \end{answer}
 \end{document}
