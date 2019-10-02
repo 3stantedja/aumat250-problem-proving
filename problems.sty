@@ -10,6 +10,7 @@
 \RequirePackage{titling} % Expose titling data for general use
 \RequirePackage{fancyhdr}
 \RequirePackage{enumitem}
+\RequirePackage{datetime2}
 
 \RequirePackage{microtype}
 \RequirePackage{lmodern}
@@ -47,12 +48,22 @@
 \numberwithin{figure}{section}
 \numberwithin{table}{section}
 
+\DTMsetup{
+  datesep = {},
+  datetimesep = .,
+  timesep = {},
+  showzoneminutes = false,
+  showisoZ = true % Show time in 24-hr format
+}
+
 % Set ordered lists to be (a), (b), etc...
 \renewcommand{\labelenumi}{(\alph{enumi})}
 \pagestyle{fancy}
 \fancyhead[L]{\thetitle}
 \fancyhead[C]{\thedate}
 \fancyhead[R]{\theauthor}
+\fancyfoot[L]{Build \DTMnow} % Really rough versioning
+\fancyfoot[C]{\thepage}
 
 \microtypesetup{
   tracking = true,
