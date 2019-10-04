@@ -15,14 +15,10 @@
     \end{problem}
     \begin{answer}
         Let's perform the negation of the above statement.
-        
         \begin{align*}
             \neg (\exists f)(\forall g) P(f,g) &\lequiv (\forall f) \neg (\forall g) P(f,g) \\
-            &\lequiv (\forall f) (\exists g) P(f,g)
+            &\lequiv (\forall f) (\exists g) \neg P(f,g)
         \end{align*}
-        
         As we can see, the negation of the statement \((\exists f)(\forall g) P(f,g)\) is \((\forall f) (\exists g) P(f,g)\) (by rules of negation of quantifiers). We'd like to argue that the negated statement is true.
-
-        % TODO: Clarify "for all f", keeping in mind order of quantifiers. Reason why the statement has to be true.
     \end{answer}
 \end{document}
