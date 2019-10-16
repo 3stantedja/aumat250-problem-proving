@@ -9,11 +9,21 @@
     \end{problem}
     \begin{answer}
         We want to prove that \(\forall n P(n)\) is true, where \(P(n) = 2^n\), and \(n\) representing the length of a binary string. Each “letter” of the binary string has two possible values, 1 or 0. So let's start with our base case where \(n = 1\).
-    	\begin{align}
-            P(1) &= 2^1 \notag\\
+        
+        \begin{align} \label{eq:1}
+            P(1) &= 2^1 \notag \\
             &= 2
     	\end{align}
-	    As we can see, the base case is true as we've established that for a string of length 1, there are two different strings possible. Now let's assume that the case for \(n = k\) (ie. \(2^k\)) is true. From here we need to prove that the case for \(2^{k + 1}\) is true such that \(\forall k P(k) \rightarrow P(k + 1)\) is true.
+       
+        As we can see, the base case is true as for a string of length 1, there are two different strings possible (\{0, 1\}). Now let's assume that the case for \(n = k\) (such that the number of different strings are \(2^k\)) is true. From here we need to prove that the case for \(2^{k + 1}\) (where \(n = k + 1\)) is true such that \(\forall k P(k) \rightarrow P(k + 1)\) is true.
+        
+        The expression \(2^k\) can be broken down as so:
+        \begin{equation} \label{eq:2}
+            2^k = \underbrace{2 \times 2 \times \dotsb \times 2 \times 2}_{k\ \text{times}}.
+        \end{equation}
+        Each of them can be considered to be a copy of \(2^1\), that is, the different states of each “letter” as shown in \eqref{eq:1}. As such we know that for the case where \(n = k\), this holds true.
+
+        Now, consider the case where \(n = k + 1\). Then
     \end{answer}
 \end{document}
     
