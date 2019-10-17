@@ -8,9 +8,21 @@
         A \textbf{\textit{binary string}} is a “word” in which each “letter” can only be \(0\) or \(1\). Prove that there are \(2^n\) different binary strings of length \(n\).
     \end{problem}
     \begin{answer}
-        Let \(n\) represent the length of the binary string, where \(n \in \mathbb{N}\). Then the number of different strings possible would be \(l(n) = 2^n\). Now, let's attempt to prove that \(\forall n P(n)\), where \(P(n): l(n) = 2^n\).
+        We want to prove that \(\forall n P(n)\) is true, where \(P(n) : l(n) = 2^n\), and \(n \in \mathbb{N}\) representing the length of a binary string. Each “letter” of the binary string has two possible values, 1 or 0. 
         
-        Let's consider the case where \(n = 1\).
+        Let's consider the base case where \(n = 1\).
+        \begin{align} \label{eq:1}
+            P(1) : l(1) &= 2^1 \notag \\
+            &= 2
+        \end{align}
+        Here, the base case is true as for a string with a length of 1, there would be two different string possible (\{0,1\}).
+
+        Now, let's assume that the case where \(n = k\) such that \(P(k): l(k) = 2^k\) is true. From here, let us prove the case for \(k + 1\) such that \(P(k) \Rightarrow P(k + 1)\).
+        \begin{align} \label{eq:2}
+            P(k + 1) : l(k + 1) &= 2^{k + 1} \notag \\
+            &= 2^k \cdot 2^1
+        \end{align}
+        As shown is \eqref{eq:2}, we could break it down to \(2^k\) and \(2^1\), and since we know that for both cases they are true, then \(P(k + 1)\) is true. As such, we have shown that \(P(k) \Rightarrow P(k + 1)\), making \(\forall n P(n)\) true, therefore proving that there are \(2^n\) different binary strings of length \(n\).
     \end{answer}
 \end{document}
     
