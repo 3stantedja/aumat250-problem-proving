@@ -8,20 +8,35 @@
         A \textbf{\textit{binary string}} is a “word” in which each “letter” can only be \(0\) or \(1\). Prove that there are \(2^n\) different binary strings of length \(n\).
     \end{problem}
     \begin{answer}
-        We want to prove that \(\forall n P(n)\) is true, where \(P(n) : l(n) = 2^n\), and \(n \in \mathbb{N}\) representing the length of a binary string. Each “letter” of the binary string has two possible values, 1 or 0. 
-        
-        Let's consider the base case where \(n = 1\).
-        \begin{align} \label{eq:1}
-            P(1) : l(1) &= 2^1 \notag \\
-            &= 2
-        \end{align}
-        Here, the base case is true as for a string with a length of 1, there would be two different string possible (\{0,1\}).
+        Let's assume that our predicate \(P(n)\) is the statement ``There are \(2^n\) binary words of length \(n\)." Now, let's look at out base case, where \(n = 1\).
+        \begin{gather}
+            \nonumber P(1): \ \text{There are} \ 2^1 \ \text{binary words of length} \ 1 \\
+            \begin{split} \label{eq:1}
+                \text{words with length 1} &= \{0, \, 1\} \\
+                \therefore \ \text{number of binary words}(1) &= 2 \\
+                &= 2^1 \\
+                &= 2  \quad \text{(agrees with premise)}
+            \end{split}
+        \end{gather}
 
-        Now, let's assume that the case where \(n = k\) such that \(P(k): l(k) = 2^k\) is true. From here, let us prove the case for \(k + 1\) such that \(P(k) \Rightarrow P(k + 1)\).
-        \begin{align} \label{eq:2}
-            P(k + 1) : l(k + 1) &= 2^{k + 1} \notag \\
-            &= 2^k \cdot 2^1
+        As we can see, for the base case where \(n = 1\) the premise is true. Now, let's assume that for some value of \(n\) (let's call this \(k\)), the premise \(P(k)\) is true. From here, we need to show by induction that the premise \(P(k + 1)\) is true for \(n = k + 1\). 
+
+        Assume a binary word of length \(k\). When we increase the word length by one (making its length \(k + 1\)), two words will be created out of the one word that we had previously.
+        \[
+            \begin{array}{ccc}
+                k & & k + 1 \\
+                \ldots 0110 & \longrightarrow & \begin{aligned}
+                    \ldots 0110\mathbf{0} \\
+                    \ldots 0110\mathbf{1} 
+                \end{aligned}
+            \end{array}
+        \]
+        We can extend this to any word of a certain length \(k\). This means that for every word with length \(k\), the number of words in that lists of words would double when we increase the word length by one. As such the number of binary words for \(n = k + 1\) is
+        \begin{align}
+            \notag 2^k \cdot 2 &= 2^k \cdot 2^1 \qquad \text{per \eqref{eq:1}} \\
+            &= 2^{(k +1)}
         \end{align}
-        As shown is \eqref{eq:2}, we could break it down to \(2^k\) and \(2^1\), and since we know that for both cases they are true, then \(P(k + 1)\) is true. As such, we have shown that \(P(k) \Rightarrow P(k + 1)\), making \(\forall n P(n)\) true, therefore proving that there are \(2^n\) different binary strings of length \(n\).
+        
+        Therefore the predicate \(P(k + 1)\), and as such the premise \(P(n)\) for strings with length \(n\) is true.
     \end{answer}
 \end{document}
