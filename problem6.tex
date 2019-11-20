@@ -8,6 +8,8 @@
         A \textbf{\textit{binary string}} is a “word” in which each “letter” can only be \(0\) or \(1\). Prove that there are \(2^n\) different binary strings of length \(n\).
     \end{problem}
     \begin{answer}
+        % Better: refer to the last letter as the kth and the 
+        % (k + 1)th letter.
         Let's assume that our predicate \(P(n)\) is the statement ``There are \(2^n\) binary words of length \(n\)." Now, let's look at out base case, where \(n = 1\).
         \begin{gather}
             \nonumber P(1): \ \text{There are} \ 2^1 \ \text{binary words of length} \ 1 \\
@@ -21,7 +23,9 @@
 
         As we can see, for the base case where \(n = 1\) the premise is true. Now, let's assume that for some value of \(n\) (let's call this \(k\)), the premise \(P(k)\) is true. From here, we need to show by induction that the premise \(P(k + 1)\) is true for \(n = k + 1\). 
 
-        Assume a binary word of length \(k\). When we increase the word length by one (making its length \(k + 1\)), two words will be created out of the one word that we had previously.
+        Assume a binary word of length \(k\). When we increase the word length by one (making its length \(k + 1\)), two words will be created out of the one word that we had previously, since there are two possibilities for the \((k + 1)\)th letter.
+        % I don't know if this is good layout-wise. I am so 
+        % sorry if it looks really bad.
         \[
             \begin{array}{ccc}
                 k & & k + 1 \\
@@ -31,7 +35,7 @@
                 \end{aligned}
             \end{array}
         \]
-        We can extend this to any word of a certain length \(k\). This means that for every word with length \(k\), the number of words in that lists of words would double when we increase the word length by one. As such the number of binary words for \(n = k + 1\) is
+        We can extend this to any word of a certain length \(k\). This means that for every word with length \(k\), the number of words in that list of words would double when we increase the word length by one. As such the number of binary words for \(n = k + 1\) is
         \begin{align}
             \notag 2^k \cdot 2 &= 2^k \cdot 2^1 \qquad \text{per \eqref{eq:1}} \\
             &= 2^{(k +1)}
