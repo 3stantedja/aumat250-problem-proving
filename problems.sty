@@ -13,23 +13,25 @@
 \RequirePackage{fancyhdr}
 \RequirePackage[shortlabels]{enumitem}
 \RequirePackage{datetime2}
-\RequirePackage{csquotes}
+% \RequirePackage{csquotes}
 
-\RequirePackage{microtype}
-\RequirePackage{lmodern}
-\RequirePackage{inconsolata}
+% Load typefaces and typographic features
+\RequirePackage{microtype}    % microtyping, kerning
+\RequirePackage{lmodern}      % newer version of Computer Modern
+\RequirePackage{inconsolata}  % verbatim, code env.
 
 \RequirePackage{mathtools}
 
-\RequirePackage{amsmath,amssymb}
+\RequirePackage{amsmath,amssymb} % loading amsmath might be reduntant.
 \RequirePackage{amsthm}
 \RequirePackage{textcomp}
 \RequirePackage{siunitx}
 
-\RequirePackage[parfill]{parskip}
+\RequirePackage[parfill]{parskip} % No indentation in paragraphs, spacing between each paragraph.
 \RequirePackage{array}
 % \RequirePackage{multirow}
 
+% Define macros to use.
 \newcommand{\tlambda}{\(\lambda\) }
 \newcommand{\ttheta}{\(\theta\) }
 \newcommand{\lequiv}{\Leftrightarrow}
@@ -64,16 +66,20 @@
 % https://tex.stackexchange.com/questions/123689/duplicating-the-amsthm-proof-environment
 \newenvironment{answer}{\begin{proof}[Answer]}{\end{proof}}
 
+% Settings for siunitx. Comment the following if not needed.
 \sisetup{
   separate-uncertainty,
   multi-part-units = brackets,
   bracket-numbers,
   sticky-per
 }
+
+% Set equation, figure, table numbering style
 \numberwithin{equation}{section}
 \numberwithin{figure}{section}
 \numberwithin{table}{section}
 
+% Settings for datetime2. Comment the following if not needed.
 \DTMsetup{
   datesep = {},
   datetimesep = .,
@@ -84,6 +90,8 @@
 
 % Set ordered lists to be (a), (b), etc...
 \renewcommand{\labelenumi}{(\alph{enumi})}
+
+% Header/footer settings, courtesy of fancyhdr.
 \pagestyle{fancy}
 \fancyhead[L]{\thetitle}
 \fancyhead[C]{\thedate}

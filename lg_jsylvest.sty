@@ -1,0 +1,119 @@
+\NeedsTeXFormat{LaTeX2e}
+
+\newcommand{\@ttName}{
+    Elementary Foundations --- Logic Macros
+}
+\newcommand{\@ttVersion}{
+    v0.2
+}
+\newcommand{\@ttDate}{
+    2019/11/14
+}
+\newcommand{\@ttDescription}{
+    This package provides macros available at EF: An Introduction
+    To Topics in Discrete Mathematics. Package file was named in 
+    lieu of Jeremy Sylvestre.
+}
+
+\ProvidesPackage{lg_jsylvest}[\@ttDate \@ttVersion \@ttName]
+
+% Macros pulled from https://sites.ualberta.ca/~jsylvest/books/EF/
+% [TODO] Make sure that all of the macros work
+% [TODO] Warn user if they used any predefined logical symbols
+% in 'problems.sty'
+
+\RequirePackage{cancel}
+
+\newcommand{\nth}[1][n]{{#1}^{\mathrm{th}}}
+\newcommand{\bbrac}[1]{\bigl(#1\bigr)}
+\newcommand{\Bbrac}[1]{\Bigl(#1\Bigr)}
+\newcommand{\correct}{\boldsymbol{\checkmark}}
+\newcommand{\incorrect}{\boldsymbol{\times}}
+\newcommand{\inv}[2][1]{{#2}^{-{#1}}}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\I}{\mathbb{I}}
+\newcommand{\abs}[1]{\left\lvert #1 \right\rvert}
+\DeclareMathOperator{\sqrtop}{sqrt}
+
+% Logic-related operators
+\newcommand{\lgcnot}{\neg}
+\newcommand{\lgcand}{\wedge}
+\newcommand{\lgcor}{\vee}
+\newcommand{\lgccond}{\rightarrow}
+\newcommand{\lgcbicond}{\leftrightarrow}
+\newcommand{\lgcimplies}{\Rightarrow}
+\newcommand{\lgcequiv}{\Leftrightarrow}
+\newcommand{\lgctrue}{\mathrm{T}}
+\newcommand{\lgcfalse}{\mathrm{F}}
+
+% Boolean
+\newcommand{\boolnot}[1]{{#1}'}
+\newcommand{\boolzero}{\mathbf{0}}
+\newcommand{\boolone}{\mathbf{1}}
+
+% Sets and functions
+\newcommand{\setdef}[2]{\left\{\mathrel{}#1\mathrel{}\middle|\mathrel{}#2\mathrel{}\right\}}
+\newcommand{\inlinesetdef}[2]{\{\mathrel{}#1\mathrel{}\mid\mathrel{}#2\mathrel{}\}}
+\let\emptyword\emptyset
+\renewcommand{\emptyset}{\varnothing}
+\newcommand{\relcmplmnt}{\smallsetminus}
+\newcommand{\union}{\cup}
+\newcommand{\intersection}{\cap}
+\newcommand{\cmplmnt}[1]{{#1}^{\mathrm{c}}}
+\newcommand{\disjunion}{\sqcup}
+\newcommand{\cartprod}{\times}
+\newcommand{\words}[1]{{#1}^\ast}
+\newcommand{\length}[1]{\abs{#1}}
+\newcommand{\powsetbare}{\mathscr{P}}
+\newcommand{\powset}[1]{\powsetbare(#1)}
+\newcommand{\funcdef}[4][\to]{#2\colon #3 #1 #4}
+\newcommand{\ifuncto}{\hookrightarrow}
+\newcommand{\ifuncdef}[3]{\funcdef[\ifuncto]{#1}{#2}{#3}}
+\newcommand{\sfuncto}{\twoheadrightarrow}
+\newcommand{\sfuncdef}[3]{\funcdef[\sfuncto]{#1}{#2}{#3}}
+\newcommand{\funcgraphbare}{\Delta}
+\newcommand{\funcgraph}[1]{\funcgraphbare(#1)}
+\newcommand{\relset}[3]{{#1}_{#2 #3}}
+\newcommand{\gtset}[2]{\relset{#1}{\gt}{#2}}
+\newcommand{\posset}[1]{\gtset{#1}{0}}
+\newcommand{\geset}[2]{\relset{#1}{\ge}{#2}}
+\newcommand{\nnegset}[1]{\geset{#1}{0}}
+\newcommand{\neqset}[2]{\relset{#1}{\neq}{#2}}
+\newcommand{\nzeroset}[1]{\neqset{#1}{0}}
+\newcommand{\natnumlt}[1]{\relset{\N}{\lt}{#1}}
+\DeclareMathOperator{\id}{id}
+\newcommand{\inclfunc}[2]{\iota_{#1}^{#2}}
+\newcommand{\projfunc}[1]{\rho_{#1}}
+\DeclareMathOperator{\proj}{proj}
+\newcommand{\funcres}[2]{\left.{#1}\right\rvert_{#2}}
+\newcommand{\altfuncres}[2]{\left.{#1}\right\rvert{#2}}
+\DeclareMathOperator{\res}{res}
+\DeclareMathOperator{\flr}{flr}
+\newcommand{\floor}[1]{\lfloor {#1} \rfloor}
+\newcommand{\funccomp}{\circ}
+\newcommand{\funcinvimg}[2]{\inv{#1}\left({#2}\right)}
+\newcommand{\card}[1]{\left\lvert #1 \right\rvert}
+\DeclareMathOperator{\cardop}{card}
+\DeclareMathOperator{\ncardop}{\#}
+\newcommand{\EngAlphabet}{\{ \mathrm{a}, \, \mathrm{b}, \, \mathrm{c}, \, \dotsc, \, \mathrm{y}, \, \mathrm{z} \}}
+\newcommand{\ShortEngAlphabet}{\{ \mathrm{a}, \, \mathrm{b}, \, \dotsc, \, \mathrm{z} \}}
+
+\newcommand{\subgraph}{\preceq}
+
+\DeclareMathOperator{\matrixring}{M}
+\newcommand{\uvec}[1]{\mathbf{#1}}
+\newcommand{\zerovec}{\uvec{0}}
+
+% The following were used to input escaped characters < (&lt;),
+% > (%gt;), and & (&amp;). 
+% I'll be replacing them back to its LaTeX equivalents
+% because it's not necessary anymore.
+\newcommand{\lt}{<}
+\newcommand{\gt}{>}
+\newcommand{\amp}{&}
+
+\endinput
