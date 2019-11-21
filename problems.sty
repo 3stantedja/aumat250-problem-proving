@@ -1,5 +1,21 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{problems}[2019/10/15 Problem Writing]
+
+\newcommand{\@ttName}{
+    Problem Writing
+}
+\newcommand{\@ttDate}{
+    2019/10/15
+}
+\newcommand{\@ttDescription}{
+    Provides a basic setup for the write-ups in AUMAT
+    250. It includes environments for writing problems
+    and answers. I don't expect this to be used in any
+    way or form. 
+}
+
+\ProvidesPackage{problems}[\@ttDate \@ttName]
+
+% Setup
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[margin=1in,headheight=14.5pt]{geometry}
 \RequirePackage{biblatex}
