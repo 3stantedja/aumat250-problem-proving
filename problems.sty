@@ -31,7 +31,7 @@
 \RequirePackage{datetime2}
 % \RequirePackage{csquotes}
 
-% Load typefaces and typographic features
+% Load typefaces and interfaces for typographic features
 \RequirePackage{microtype}    % microtyping, kerning
 \RequirePackage{lmodern}      % newer version of Computer Modern
 \RequirePackage{inconsolata}  % verbatim, code env.
@@ -58,16 +58,16 @@
 % be added in later versions.
 % https://tex.stackexchange.com/questions/67242/a-theoremstyle-with-complete-indentation-using-amsthm
 \newtheoremstyle{indented}
-  {3pt}% space before
-  {3pt}% space after
-  {\addtolength{\@totalleftmargin}{3.5em}
-   \addtolength{\linewidth}{-3.5em}
-   \parshape 1 3.5em \linewidth}% body font
-  {}% indent
-  {\bfseries}% header font
-  {.}% punctuation
-  {.5em}% after theorem header
-  {}% header specification (empty for default)
+    {3pt}% space before
+    {3pt}% space after
+    {\addtolength{\@totalleftmargin}{3.5em}
+     \addtolength{\linewidth}{-3.5em}
+     \parshape 1 3.5em \linewidth}% body font
+    {}% indent
+    {\bfseries}% header font
+    {.}% punctuation
+    {.5em}% after theorem header
+    {}% header specification (empty for default)
 
 \theoremstyle{definition}
 \newtheorem*{problem}{Problem}
@@ -84,10 +84,10 @@
 
 % Settings for siunitx. Comment the following if not needed.
 \sisetup{
-  separate-uncertainty,
-  multi-part-units = brackets,
-  bracket-numbers,
-  sticky-per
+    separate-uncertainty,
+    multi-part-units = brackets,
+    bracket-numbers,
+    sticky-per
 }
 
 % Set equation, figure, table numbering style
@@ -97,11 +97,11 @@
 
 % Settings for datetime2. Comment the following if not needed.
 \DTMsetup{
-  datesep = {},
-  datetimesep = .,
-  timesep = {},
-  showzoneminutes = false,
-  showisoZ = true % Show time in 24-hr format
+    datesep = {},
+    datetimesep = .,
+    timesep = {},
+    showzoneminutes = false,
+    showisoZ = true % Show time in 24-hr format
 }
 
 % Set ordered lists to be (a), (b), etc...
@@ -115,9 +115,10 @@
 \fancyfoot[L]{Build \DTMnow} % Really rough versioning
 \fancyfoot[C]{\thepage}
 
+% Typography-related stuff
 \microtypesetup{
-  tracking = true,
-  kerning = true
+    tracking = true,
+    kerning = true
 }
 
 \author{Laurence Amadeus Tristan}
