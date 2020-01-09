@@ -1,5 +1,5 @@
 # aumat250-problem-solving
-Contains sources to my homework assignments to AUMAT 250 (Discrete Mathematics) for University of Alberta (Augustana Faculty)
+Contains sources to my homework assignments to AUMAT 250 (Discrete Mathematics) for University of Alberta (Augustana Faculty).
 
 A TeX distribution is required to compile each of the sources.
 
@@ -19,7 +19,7 @@ The following packages that will be needed are:
 - inconsolata
 - mathtools
 - textcomp
-- siunitx
+- siunitx (might need `expl3`)
 - parskip
 - cancel
 
