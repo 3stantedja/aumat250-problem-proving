@@ -6,6 +6,7 @@ A TeX distribution is required to compile each of the sources.
 ## Packages
 The following packages that will be needed are:
 - biblatex
+- biber
 - hyperref
 - wrapfig
 - booktabs
