@@ -21,6 +21,7 @@ The following packages that will be needed are:
 - mathtools
 - textcomp
 - siunitx (might need `expl3`)
+  - `expl3`
 - parskip
 - cancel
 
