@@ -1,7 +1,5 @@
 # aumat250-problem-solving
-Contains sources to my homework assignments to AUMAT 250 (Discrete Mathematics) for University of Alberta (Augustana Faculty).
-
-A TeX distribution is required to compile each of the sources.
+Contains sources to my homework assignments to AUMAT 250 (Discrete Mathematics) for University of Alberta (Augustana Faculty). A TeX distribution is required to compile each of the sources.
 
 ## Packages
 The following packages that will be needed are:
@@ -27,3 +25,9 @@ The following packages that will be needed are:
 
 Other dependencies that are within any of the packages has not been listed yet. I do strongly recommend to use a full installation of TeX Live or MiKTeX.
 
+## Building
+```bash
+$ cd /path/to/this/repo
+$ latexmk -pdf // compiles all documents
+$ latexmk -pdf problem6.tex // compiles one of the documents
+```
