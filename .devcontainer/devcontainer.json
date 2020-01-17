@@ -1,0 +1,28 @@
+{
+    "appPort": 3000,
+    "extensions": [
+        "James-Yu.latex-workshop",
+        "PKief.material-icon-theme",
+        "eamodio.gitlens",
+        "mhutchie.git-graph",
+        "liviuschera.noctis"
+    ],
+    "settings": {
+        "workbench.iconTheme": "material-icon-theme",
+        "editor.suggestSelection": "first",
+        "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+        "workbench.colorTheme": "Noctis",
+        "editor.wordWrap": "wordWrapColumn",
+        "editor.fontFamily": "'PragmataPro Liga', Iosevka, Menlo, Monaco, 'Cascadia Code', 'Courier New', monospace",
+        "editor.fontSize": 13,
+        "editor.fontLigatures": true,
+        "latex-workshop.view.pdf.viewer": "browser",
+        "git.confirmSync": false,
+        "gitlens.views.repositories.location": "gitlens",
+        "gitlens.views.fileHistory.location": "gitlens",
+        "gitlens.views.lineHistory.location": "gitlens",
+        "gitlens.views.compare.location": "gitlens",
+        "gitlens.views.search.location": "gitlens",
+        "explorer.confirmDelete": false
+    }
+}
