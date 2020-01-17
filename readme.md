@@ -23,11 +23,11 @@ The following packages that will be needed are:
 - parskip
 - cancel
 
-Other dependencies that are within any of the packages has not been listed yet. I do strongly recommend to use a full installation of TeX Live or MiKTeX.
+Other dependencies needed by the above listed packages has not been listed (completely) yet. I do strongly recommend to use a full installation of TeX Live or MiKTeX.
 
 ## Building
 ```bash
 $ cd /path/to/this/repo
 $ latexmk -pdf // compiles all documents
-$ latexmk -pdf problem6.tex // compiles one of the documents
+$ latexmk -pdf problem6.tex // compiles one of the documents (e.g. problem6.tex)
 ```
