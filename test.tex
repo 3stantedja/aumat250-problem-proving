@@ -1,6 +1,9 @@
+\RequirePackage{snapshot}
 \documentclass[a4paper]{article}
 \usepackage{problems}
 \usepackage{lg_jsylvest}
+
+\usepackage{fancyvrb}
 
 \title{Test documents for \texttt{problems} and \texttt{lg\_jsylvest}}
 \author{Tristan Tedjapradipta}
@@ -9,6 +12,15 @@
 \begin{document}
     Some logic-related symbols:
     \begin{equation}
-        \lgcnot \lgcand \lgcor
+        \lgcnot \ \lgcand \ \lgcor \ \lgccond \ \lgcbicond \ \lgcimplies \ \lgcequiv \ \lgctrue \ \lgcfalse
     \end{equation}
+    Boolean:
+    \begin{equation}
+        \boolnot{\boolzero} \ \boolzero \ \boolone
+    \end{equation}
+    Sets and functions:
+
+    \pagebreak
+    Output from \texttt{snapshot} (with \texttt{fancyvrb})
+    \VerbatimInput{test.dep}
 \end{document}
