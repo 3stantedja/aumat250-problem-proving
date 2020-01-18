@@ -4,6 +4,15 @@
 \usepackage{lg_jsylvest}
 
 \usepackage{fancyvrb}
+% https://tex.stackexchange.com/a/482800
+\newcommand{\verbatiminput}[1]{
+  \VerbatimInput[
+    label=\fbox{\texttt{\detokenize{#1}}},
+    labelposition=topline,
+    frame=single,
+    numbers=left
+  ]{#1}
+}
 
 \title{Test documents for \texttt{problems} and \texttt{lg\_jsylvest}}
 \author{Tristan Tedjapradipta}
@@ -22,5 +31,5 @@
 
     \pagebreak
     Output from \texttt{snapshot} (with \texttt{fancyvrb})
-    \VerbatimInput{test.dep}
+    \verbatiminput{test.dep}
 \end{document}
