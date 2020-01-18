@@ -242,4 +242,5 @@ TSWLatexianTemp*
 *.spl
 
 *.pdf
-test.dep
+*.dep
+!/dependencies/*.dep
