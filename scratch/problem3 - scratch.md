@@ -18,4 +18,4 @@ Say... _3x_. This is not a derivative of _f_, therefore the predicate (thereby t
 
 Translated statement: for all functions in _f_ there exists a function _g_ that is not the derivative of the function in _f_.
 
-Assume _f_ is a non-specific function that is continuous and differentiable. This is necessary because there are functions of _f_ where it is non-continuous and/or non-differentiable such that there is no 
+Assume _f_ is a non-specific function that is continuous. Now, the property of being differentiable is dependent on the domain of the function, as functions such as `|x^2|` will be continuous but non-differentiable at _x_ = 0. 
