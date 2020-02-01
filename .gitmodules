@@ -1,0 +1,3 @@
+[submodule "tex-common"]
+	path = tex-common
+	url = git@github.com:3stantedja/tex-common.git
