@@ -38,4 +38,6 @@ In test.tex, the line `\RequirePackage{}` is commented out. Uncomment if you wan
 
 Scratch work is saved under `/scratch/`. .bib files are stored in bibliography. Please store them there instead.
 
-`/dotfiles/` and `/.devcontainer/` are setup files for Visual Studio Online (I have not bothered getting around finishing this and will not finish it anytime soon). These (at least in `/.devcontainer/`) contains personal configurations that I would use in Visual Studio (Code/Online). 
+`/dotfiles/` and `/.devcontainer/` are setup files for Visual Studio Online (I have not bothered getting around finishing this and will not finish it anytime soon). These (at least in `/.devcontainer/`) contains personal configurations that I would use in Visual Studio (Code/Online).
+
+In theory I could make a Makefile/.tasks.json file to ease building/cleaning but I'm not dedicated enough to do that (and this is only for assignments only so I don't expect anybody to use this in any useful capacity). I'd expect that whatever text editor you're using it should allow building the sources from the editor (with the appropriate extensions/plugins). 
