@@ -25,13 +25,21 @@ The following packages that will be needed are:
 
 Other dependencies needed by the above listed packages has not been listed (completely) yet. Check out `/dependencies/test.dep` for a complete list of the loaded packages. I do recommend a full installation of TeX Live, or use MiKTeX and let it download packages on-the-fly. 
 
+## Cloning
+`cd` into the directory you want the repo to be in, then:
+```bash
+$ git clone --recurse-submodules https://github.com/3stantedja/aumat250-problem-proving.git
+$ git pull --recurse-submodules // pulls latest changes along with the submodule
+```
+
 ## Building
 Assuming you're in this repo,
 ```bash
-$ latexmk -pdf // compiles all documents
-$ latexmk -pdf problem6.tex // compiles one of the documents (e.g. problem6.tex)
-$ latexmk -pdf test.tex // compiles the test document (see Additional Notes.)
+$ latexmk // compiles all documents
+$ latexmk problem6.tex // compiles one of the documents (e.g. problem6.tex)
+$ latexmk test.tex // compiles the test document (see Additional Notes.)
 ```
+Resulting files will be outputted to `./output/`.
 
 ## Additional Notes
 In test.tex, the line `\RequirePackage{}` is commented out. Uncomment if you want to generate a dependency list, although I can't guarantee it not failing to build (did not fail on my Mac, failed on both Linux VM and Visual Studio Online w/ a custom install scheme). This also requires `fancyvrb` to display the output of the generated .dep file in the document.
