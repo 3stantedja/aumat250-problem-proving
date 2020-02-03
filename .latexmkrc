@@ -4,4 +4,4 @@ ensure_path(
 	'TEXINPUTS',
 	'./tex-common//'
 );
-$out_dir = "./output/";
+$out_dir = "./output/"
