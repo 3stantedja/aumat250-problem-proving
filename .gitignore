@@ -241,7 +241,13 @@ TSWLatexianTemp*
 # generated if using elsarticle.cls
 *.spl
 
+# do not include generated output except in /dependencies/
 *.pdf
 *.dep
 !/dependencies/*.dep
+
+# macOS-specific
 .DS_Store
+
+# vim et al. swap file
+*.swp
