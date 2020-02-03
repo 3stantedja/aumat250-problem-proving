@@ -1,0 +1,21 @@
+{
+	"folders":
+	[
+		{
+			"path": "."
+		},
+		{
+			"path": "../tex-common",
+			"name": "Common packages"
+		}
+	],
+	"settings" :
+	{
+		"tab_size": 4,
+		"output_directory": "./output/",
+		"aux_directory": "./output/",
+		"builder": "traditional"
+		
+	}
+
+}
