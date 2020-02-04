@@ -14,8 +14,18 @@
 		"tab_size": 4,
 		"output_directory": "./output/",
 		"aux_directory": "./output/",
-		"builder": "traditional"
-		
+		"builder": "traditional",
+		"builder_settings":
+		{
+			"display_log": true,
+			// use latexmk instead of texify if user is using MiKTeX 
+			"windows":
+			{
+				// copied from the LaTeXTools documentation
+				// https://latextools.readthedocs.io/en/latest/settings/#builder-settings
+				"command": ["latexmk", "-cd", "-e", "-f", "-%E", "-interaction=nonstopmode", "-synctex=1"]
+			}
+		}
 	}
 
 }

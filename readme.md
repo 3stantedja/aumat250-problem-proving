@@ -3,6 +3,7 @@ Contains sources to my homework assignments to AUMAT 250 (Discrete Mathematics) 
 
 ## Packages
 The following packages that will be needed are:
+- `latexmk`
 - biblatex
 - biber
 - hyperref
@@ -39,7 +40,7 @@ $ latexmk // compiles all documents
 $ latexmk problem6.tex // compiles one of the documents (e.g. problem6.tex)
 $ latexmk test.tex // compiles the test document (see Additional Notes.)
 ```
-Resulting files will be outputted to `./output/`.
+Resulting files will be outputted to `./output/`. MiKTeX users, make sure that Perl and `latexmk` are installed.
 
 ## Additional Notes
 In test.tex, the line `\RequirePackage{}` is commented out. Uncomment if you want to generate a dependency list, although I can't guarantee it not failing to build (did not fail on my Mac, failed on both Linux VM and Visual Studio Online w/ a custom install scheme). This also requires `fancyvrb` to display the output of the generated .dep file in the document.
