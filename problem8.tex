@@ -1,7 +1,7 @@
 \documentclass[a4paper,12pt]{article}
 \usepackage{problems,lg_jsylvest}
 \title{Problem Write-up 8}
-\date{2019-10-18}
+\date{2020-02-12}
 
 \begin{document}
 	\begin{problem}
@@ -12,7 +12,7 @@
 	\begin{answer}
 		Let's start by substituting \(A \cartprod (B \relcmplmnt C)\) as \(M\) and \((A \cartprod B) \relcmplmnt (A \cartprod C)\) as \(N\). To test for the set equality \(M = N\), we need to check that \(M \subseteq N\) and \(N \subseteq M\), applying the Subset Test twice. 
 
-		For the case where \(A \cartprod (B \relcmplmnt C) \subseteq (A \cartprod B) \relcmplmnt (A \cartprod C)\), say that we have an object \(x\) consisting of \((a,b)\). Then, \(x \in M\). This implies that \(a = A\) and \(b = B \relcmplmnt C\).
+		For the case where \(A \cartprod (B \relcmplmnt C) \subseteq (A \cartprod B) \relcmplmnt (A \cartprod C)\), say that we have an object \(x\) consisting of \((a,b)\). Then, \(x \in M\). This implies that \(a = A\) and \(b = B \relcmplmnt C\). Since we're only getting \(b\) from \(B \relcmplmnt C\), we can say that \(b \in B\).
 
 		We can apply this backward in the case where \((A \cartprod B) \relcmplmnt (A \cartprod C) \subseteq A \cartprod (B \relcmplmnt C)\).
 	\end{answer}
