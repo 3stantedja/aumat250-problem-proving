@@ -21,10 +21,17 @@
 			// use latexmk instead of texify if user is using MiKTeX 
 			"windows":
 			{
+				"script_commands": ["latexmk -cd -r .latexmkrc -f -interaction=nonstopmode -synctex=1"],
 				// copied from the LaTeXTools documentation
 				// https://latextools.readthedocs.io/en/latest/settings/#builder-settings
-				"command": ["latexmk", "-cd", "-e", "-f", "-%E", "-interaction=nonstopmode", "-synctex=1"]
+				"command": ["latexmk -cd -r .latexmkrc -f -interaction=nonstopmode -synctex=1"]
 			}
+		},
+		// really hacky way for LaTeXTools to properly run latexmk;
+		// don't ask me why LaTeXTools decided to ignore .latexmkrc
+		"windows":
+		{
+			"distro": "texlive"
 		}
 	}
 
