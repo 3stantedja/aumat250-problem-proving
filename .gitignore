@@ -251,3 +251,6 @@ TSWLatexianTemp*
 
 # vim et al. swap file
 *.swp
+
+# Sublime Text-related files
+*.sublime-workspace
