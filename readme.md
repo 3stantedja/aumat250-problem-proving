@@ -40,13 +40,13 @@ $ latexmk // compiles all documents
 $ latexmk problem6.tex // compiles one of the documents (e.g. problem6.tex)
 $ latexmk test.tex // compiles the test document (see Additional Notes.)
 ```
-Resulting files will be outputted to `./output/`. MiKTeX users, make sure that Perl and `latexmk` are installed.
+Resulting files will be outputted to `./output/`. Windows/MiKTeX users, make sure that Perl and `latexmk` are installed.
 
 ## Additional Notes
 In test.tex, the line `\RequirePackage{}` is commented out. Uncomment if you want to generate a dependency list, although I can't guarantee it not failing to build (did not fail on my Mac, failed on both Linux VM and Visual Studio Online w/ a custom install scheme). This also requires `fancyvrb` to display the output of the generated .dep file in the document.
 
-Scratch work is saved under `/scratch/`. .bib files are stored in bibliography. Please store them there instead.
+Scratch work is saved under `./scratch/`. .bib files are stored in `./bibliography/`. Please store them there instead.
 
-`/dotfiles/` and `/.devcontainer/` are setup files for Visual Studio Online (I have not bothered getting around finishing this and will not finish it anytime soon). These (at least in `/.devcontainer/`) contains personal configurations that I would use in Visual Studio (Code/Online).
+`./dotfiles/` and `./.devcontainer/` are setup files for Visual Studio Online (I have not bothered getting around finishing this and will not finish it anytime soon). These (at least in `./.devcontainer/`) contains personal configurations that I would use in Visual Studio (Code/Online).
 
 In theory I could make a Makefile/.tasks.json file to ease building/cleaning but I'm not dedicated enough to do that (and this is only for assignments only so I don't expect anybody to use this in any useful capacity). I'd expect that whatever text editor you're using it should allow building the sources from the editor (with the appropriate extensions/plugins). 
