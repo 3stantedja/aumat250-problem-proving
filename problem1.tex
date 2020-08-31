@@ -1,0 +1,38 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{problems,lg_jsylvest}
+
+\title{Problem Write-up 1}
+\date{2020-08-31}
+
+\begin{document}
+	\section{Problem 1}
+    \begin{problem}
+        Consider the logical statement
+        \begin{equation} \label{eq:1.1}
+        	(p \lgccond q) \lgccond (\lgcnot p \lgcor q) \text{.}
+        \end{equation}
+        Argue convincingly that this symbolic statement is a tautology, not by writing out its truth table, but by arguing that it is not possible for the statement to be false.
+    \end{problem}
+    
+    \begin{answer}
+        Assume that Statement \ref{eq:1.1} is false. Hence, \(\lgcnot p \lgcor q\) has to be false, and \(p \lgccond q\) is true. This means that \(p\) is true and \(q\) is false.
+
+       	With these truth values for \(p\) and \(q\), \(p \lgccond q\) is false, contradicting the fact that \(p \lgccond q\) has to be true, which means that Statement \ref{eq:1.1} can't be false. As such, \eqref{eq:1.1} is a tautology.
+        
+    \end{answer}
+
+    \section{Problem 2}
+    \begin{problem}
+        In this activity, we will justify the equivalence
+        \begin{equation} \label{eq:2.1}
+        	p \lgcbicond q \lgcequiv (p\lgccond q) \lgcand (q \lgccond p) \text{.}
+        \end{equation}
+        So consider the statements \(A = p \lgcbicond q\) and \(B = (p\lgccond q) \lgcand (q \lgccond p)\text{.}\)
+
+        Explain why the the two arguments in Task a and Task b, taken together, justify the equivalence \(A \lgcequiv B\text{.}\) Do this without making any further arguments about the truth values of \(p\) and \(q\).
+    \end{problem}
+    
+    \begin{answer}
+        Insert answer here
+    \end{answer}
+    \end{document}
