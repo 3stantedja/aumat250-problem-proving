@@ -5,7 +5,7 @@
 			"path": "."
 		},
 		{
-			"path": "../tex-common",
+			"path": "./tex-common",
 			"name": "Common packages"
 		}
 	],
