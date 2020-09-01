@@ -18,7 +18,6 @@
         Assume that Statement \ref{eq:1.1} is false. Hence, \(\lgcnot p \lgcor q\) has to be false, and \(p \lgccond q\) is true. This means that \(p\) is true and \(q\) is false.
 
        	With these truth values for \(p\) and \(q\), \(p \lgccond q\) is false, contradicting the fact that \(p \lgccond q\) has to be true, which means that Statement \ref{eq:1.1} can't be false. As such, \eqref{eq:1.1} is a tautology.
-        
     \end{answer}
 
     \section{Problem 2}
@@ -29,10 +28,42 @@
         \end{equation}
         So consider the statements \(A = p \lgcbicond q\) and \(B = (p\lgccond q) \lgcand (q \lgccond p)\text{.}\)
 
-        Explain why the the two arguments in Task a and Task b, taken together, justify the equivalence \(A \lgcequiv B\text{.}\) Do this without making any further arguments about the truth values of \(p\) and \(q\).
+        \begin{enumerate}
+        	\item Argue that if \(A\) is false, then so is \(B\).
+        	\item Argue that if \(B\) is false, then so is \(A\).
+        	\item Explain why the the two arguments in (a) and (b), taken together, justify the equivalence \(A \lgcequiv B\).  
+        	Do this without making any further arguments about the truth values of \(p\) and \(q\).
+        \end{enumerate}
     \end{problem}
     
     \begin{answer}
-        To justify the equivalence of \(A \lgcequiv B\), 
+        For \(A\) to be false, the following needs to happen:
+        \begin{enumerate}[i.]
+        	\item \(p = \text{false}\), \(q = \text{true}\); or
+        	\item \(p = \text{true}\), \(q = \text{false}\).
+        \end{enumerate}
+        In the first case, this means \(p \lgccond q\) is true and \(q \lgccond p\) is false, making \(B\) false (due to the conjunction). 
+        Similarly, with the second case this means that \(p \lgccond q\) is false and \(q \lgccond p\) is true, turning \(B\) false.
+
+        Now let's do the reverse. For \(B\) to be false, the following needs to happen:
+        \begin{enumerate}
+        	\item \((p \lgccond q) = \text{false}\), or
+        	\item \((q \lgccond p) = \text{false}\).
+        \end{enumerate}
+        Looking at the first case, this means that \((q \lgccond p)\) is true (because \(p = \text{true}\) and \(q = \text{false}\)).
+        With these truth values for \(p\) and \(q\), \(A\) is false (due to the biconditional).
+        Similarly, when \((q \lgccond p)\) is false, \((p \lgccond q)\) is true, with the truth values for \(p\) and \(q\) being false and true, respectively.
+        As such we come to the same conclusion for \(A\), which is that it is false.
+
+        To justify the equivalence, let's turn Statement \ref{eq:2.1} to a biconditional, producing the following:
+        \begin{equation} \label{eq:2.2}
+        	(p \lgcbicond q) \lgcbicond ((p\lgccond q) \lgcand (q \lgccond p)).
+        \end{equation}
+        We need to show that \eqref{eq:2.2} is tautological. 
+        We've shown that both \(A \lgccond B\) and \(B \lgccond A\) is true by showing that if one is false, so is the other. 
+        Let's prove that's the case, by assuming that (a) is false and (b) is true.
+        Say that if \(A\) is false, \(B\) is true. This means that supposedly the substatements \(A\) and \(B\) have differing truth values.
+        However applying that line of thinking would not be possible for (b) to be true, because we have said that if \(B\) is false, then \(A\) is false; however we've argued earlier that \(A\) is false when \(B\) is true, hence a contradiction. 
+        Therefore, arguments (a) and (b) are sufficient to justify the equivalence as it is not possible for Statement \ref{eq:2.2} to be false, hence showing that the biconditional is an equivalence.
     \end{answer}
-    \end{document}
+\end{document}
