@@ -21,5 +21,10 @@
         	\lgcnot (\exists f)(\forall g) P(f,g) &\lgcequiv (\forall f) \lgcnot (\forall g) P(f,g) \\
         	&\lgcequiv (\forall  f) (\exists g) \lgcnot P(f,g)
         \end{align*}
+        We would like to argue that the negation of the statement is true. Assume an arbitrary, continuous function \(f\). 
+        The negated statement argues that for the function \(f\) there exists a function \(g\) such that \(g \neq f'\). 
+        One example that would cover most cases is when we define \(g = f\). 
+        This means for most cases \(g\) would not be a derivative of \(f\) given the predicate \(P(f,g)\), save for cases like exponential functions (e.g. \(\exp{(x)}\)), and absolute functions (e.g. \(\abs{x}\); this is because while technically it is differentiable, at \(x = 0\) it does not exist, hence discontinuous; which means that no matter the case the absolute function does not have a continuous derivative function \(g\)). 
+        For the case of \(\exp{(x)}\), picking any other functions for \(g\) will fulfill the negated statement.
     \end{answer}
 \end{document}
