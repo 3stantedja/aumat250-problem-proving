@@ -21,6 +21,15 @@
         	\item there exists another number greater than 1 and not itself that divides \(n\),
         	\item and \(n > 1\).
     	\end{enumerate}
-    	In our contrapositive, since \(n\) is composite, then 
+    	In our contrapositive, since \(n\) is composite, then \(n\) can be factored to \(a\), \(b\).
+        As such, we can do the following:
+        \begin{align}  \label{eq:1}
+            2^n - 1 &= 2^{ab} - 1 \notag \\
+            &= (2^a)^b - 1^b
+        \end{align}
+        Apply the difference of power factorisation to \eqref{eq:1}.
+        \begin{equation} \label{eq:2}
+            (2^a)^b - 1^b = (2^a - 1)((2^a)^{b - 1} + (2^a)^{b - 2} (1) + \dotsb + (2^a) (1)^{b - 2} + (1)^{b - 1})
+        \end{equation}
     \end{answer}
 \end{document}
