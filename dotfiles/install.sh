@@ -2,10 +2,10 @@
 TEXLIVE="http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz"
 TEXLIVEFILE="install-tl-unx.tar.gz"
 lPATHS="texlive.sh"
-ROOTDIR=/usr/local/texlive/2019
-USERDIR=$HOME/.texlive2019
+ROOTDIR=/usr/local/texlive/2020
+USERDIR=$HOME/.texlive2020
 
-export PATH=/usr/local/texlive/2019/bin/x86_64-linux:$PATH 
+export PATH=/usr/local/texlive/2020/bin/x86_64-linux:$PATH 
 
 # Clean up previous installations if it fails previously
 sudo rm -rf $ROOTDIR
