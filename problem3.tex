@@ -1,15 +1,26 @@
 \documentclass[12pt,a4paper]{article}
 \usepackage{problems,lg_jsylvest}
 
-\title{Problem Write-up n}
-\date{\today}
+\title{Problem Write-up 3}
+\date{2020-09-02}
 
 \begin{document}
     \begin{problem}
-        Insert problem here
+        \emph{Prove by proving the contrapositive:} If \(2^n - 1\) is prime, then \(n\) is prime.
     \end{problem}
     
     \begin{answer}
-        Insert answer here
+        First, let's determine the contrapositive of the above statement.
+        \begin{indcontrapositive}
+        	If \(n\) is not prime, then \(2^n - 1\) is not prime.
+        \end{indcontrapositive}
+        Now, let's define what a non-prime number \(n\) (now referred as a \emph{composite}) is.
+        A composite number \(n\) is when
+        \begin{enumerate}
+        	\item \(n\) is a positive integer,
+        	\item there exists another number greater than 1 and not itself that divides \(n\),
+        	\item and \(n > 1\).
+    	\end{enumerate}
+    	In our contrapositive, since \(n\) is composite, then 
     \end{answer}
 \end{document}
